@@ -66,3 +66,8 @@ e.g.
 License and Authors
 -------------------
 Authors: TODO: List authors
+=======
+cookbook-rec_radiko
+===================
+
+Chef Cookbook for recording Radiko
