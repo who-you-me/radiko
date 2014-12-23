@@ -1,3 +1,9 @@
+default[:system][:timezone] = "Asia/Tokyo"
+default[:ntp][:servers] = ["ntp.nict.jp", "ntp.jst.mfeed.ad.jp"]
+
+default[:radiko][:user] = "radiko"
+default[:radiko][:home_dir] = "/var/radiko"
+
 default[:radiko][:programs] = [
     {
         :name       => "IJUIN",
@@ -21,4 +27,4 @@ default[:radiko][:programs] = [
     }
 ]
 
-default[:radiko][:save_to] = "/home/radiko/rec"
+default[:radiko][:save_to] = "/var/radiko/rec"

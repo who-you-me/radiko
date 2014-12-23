@@ -1,4 +1,4 @@
-rec_radiko Cookbook
+radiko Cookbook
 ===================
 TODO: Enter the cookbook description here.
 
@@ -11,14 +11,14 @@ TODO: List your cookbook requirements. Be sure to include any requirements this 
 
 e.g.
 #### packages
-- `toaster` - rec_radiko needs toaster to brown your bagel.
+- `toaster` - radiko needs toaster to brown your bagel.
 
 Attributes
 ----------
 TODO: List you cookbook attributes here.
 
 e.g.
-#### rec_radiko::default
+#### radiko::default
 <table>
   <tr>
     <th>Key</th>
@@ -27,7 +27,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['rec_radiko']['bacon']</tt></td>
+    <td><tt>['radiko']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -36,17 +36,17 @@ e.g.
 
 Usage
 -----
-#### rec_radiko::default
+#### radiko::default
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `rec_radiko` in your node's `run_list`:
+Just include `radiko` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[rec_radiko]"
+    "recipe[radiko]"
   ]
 }
 ```
@@ -67,7 +67,7 @@ License and Authors
 -------------------
 Authors: TODO: List authors
 =======
-cookbook-rec_radiko
+cookbook-radiko
 ===================
 
 Chef Cookbook for recording Radiko
