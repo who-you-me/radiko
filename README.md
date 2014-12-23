@@ -1,24 +1,21 @@
 radiko Cookbook
 ===================
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Chef Cookbook for recording Radiko programs
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - radiko needs toaster to brown your bagel.
+- `system`
+- `ntp`
+- `yum-epel`
+- `yum-repoforge`
+- `apt`
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
-e.g.
-#### radiko::default
+#### radiko::install
 <table>
   <tr>
     <th>Key</th>
@@ -27,47 +24,38 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['radiko']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['radiko']['user']</tt></td>
+    <td>String</td>
+    <td>Unix user for Radiko</td>
+    <td><tt>radiko</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['radiko']['home_dir']</tt></td>
+    <td>String</td>
+    <td>Scripts for radiko will be installed in it</td>
+    <td><tt>/var/radiko</tt></td>
   </tr>
 </table>
 
-Usage
------
-#### radiko::default
-TODO: Write usage instructions for each cookbook.
+#### radiko::install
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['radiko']['save_to']</tt></td>
+    <td>String</td>
+    <td>Recorded mp3 files will be saved in it</td>
+    <td><tt>/var/radiko/rec</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['radiko']['programs']</tt></td>
+    <td>Array</td>
+    <td>Programs to record. See attributes/default.rb</td>
+    <td><tt>See attributes/default.rb</tt></td>
+  </tr>
+</table>
 
-e.g.
-Just include `radiko` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[radiko]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
-=======
-cookbook-radiko
-===================
-
-Chef Cookbook for recording Radiko
