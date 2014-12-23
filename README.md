@@ -55,7 +55,7 @@ Attributes
     <td><tt>['radiko']['programs']</tt></td>
     <td>Array</td>
     <td>Programs to record. See attributes/default.rb</td>
-    <td><tt>See attributes/default.rb</tt></td>
+    <td>See attributes/default.rb</td>
   </tr>
 </table>
 
