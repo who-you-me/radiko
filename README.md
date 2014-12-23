@@ -37,7 +37,7 @@ Attributes
   </tr>
 </table>
 
-#### radiko::install
+#### radiko::record
 <table>
   <tr>
     <th>Key</th>
