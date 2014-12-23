@@ -17,18 +17,25 @@ case node[:platform]
     package_options = "--enablerepo=epel,rpmforge"
 
   when "ubuntu"
+    include_recipe "apt"
     packages.push "libxml2-utils"
     codename = node['lsb']['codename']
 
     if codename == "trusty" then
-      include_recipe "apt"
-
       apt_repository "trusty-media" do
         uri "http://ppa.launchpad.net/mc3man/trusty-media/ubuntu"
         distribution codename
         components ["main"]
         keyserver "keyserver.ubuntu.com"
         key "8E51A6D660CD88D67D65221D90BD7EACED8E640A"
+      end
+    else
+      apt_repository "swftools" do
+        uri "http://ppa.launchpad.net/guilhem-fr/swftools/ubuntu"
+        distribution codename
+        components ["main"]
+        keyserver "keyserver.ubuntu.com"
+        key "3932C50E257F207E32776643E429E19D97F87FBF"
       end
     end
 end
